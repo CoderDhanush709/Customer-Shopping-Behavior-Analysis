@@ -1,120 +1,61 @@
-# Customer Shopping Behavior & Segmentation Analysis
+# 🛍️ Customer Shopping Behavior Analysis & BI Dashboard
 
-### End-to-End Data Analysis Project | Python • MySQL • Power BI
+An end-to-end consumer behavior analytics project analyzing **3,900+ retail transactions** to uncover demographic purchasing drivers, subscription adoption, product category performance, and customer satisfaction metrics.
 
 ---
 
-## 📌 Project Overview
+## 🖥️ Executive Dashboard Preview
 
-This project analyzes customer shopping behavior to understand purchasing patterns, segment customers based on their activity, and provide actionable business insights.
-
-The goal was to transform raw customer transaction data into meaningful insights that can help a business improve marketing strategies, increase customer retention, and optimize product offerings.
+![Customer Shopping Behavior Dashboard](customer_behaviour_dashboard.png)
 
 ---
 
 ## 🎯 Business Objectives
 
-- Clean and prepare raw customer transaction data
-- Analyze revenue trends, discount impact, and purchase behavior
-- Segment customers into meaningful groups (New, Returning, Loyal)
-- Rank top-performing products by category
-- Build an interactive dashboard for stakeholders
+* **Demographic Segmentation:** Analyze how customer age groups (`Young Adult`, `Middle Aged`, `Adult`, `Senior`) and genders influence spending patterns.
+* **Subscription Viability:** Determine the revenue contribution and adoption rate of subscription memberships.
+* **Category Contribution:** Identify high-volume vs. high-revenue merchandise categories (`Clothing`, `Accessories`, `Footwear`, `Outerwear`).
+* **Satisfaction Tracking:** Monitor customer feedback across product tiers using average review ratings.
 
 ---
 
-## 🛠️ Tools & Technologies
+## 📈 Key Performance Indicators (KPIs)
 
-| Category              | Tools Used                  |
-|-----------------------|-----------------------------|
-| Data Cleaning & EDA   | Python (Pandas, NumPy)      |
-| Data Storage & Query  | MySQL                       |
-| Visualization         | Power BI (DAX, Data Modeling) |
-| Version Control       | Git & GitHub                |
-
----
-
-## 📂 Project Structure
+| Metric | Value | Business Takeaway |
+| :--- | :--- | :--- |
+| **Total Analyzed Cohort** | **3,900 Customers** | Comprehensive retail shopper sample |
+| **Average Purchase Amount** | **$59.76** | Consistent basket value across order cycles |
+| **Average Review Rating** | **3.75 / 5.0** | Stable overall baseline with targeted room for category uplift |
+| **Subscription Share** | **27% Subscribed / 73% Non-Subscribed** | Significant retention and conversion opportunity |
 
 ---
 
-## 🔄 Project Workflow
+## 💡 Key Business Insights
 
-1. **Data Collection** – Loaded raw customer shopping dataset
-2. **Data Cleaning (Python)**  
-   - Handled missing values (imputed review ratings using category-wise median)
-   - Corrected data types
-   - Removed duplicates and inconsistencies
-3. **Feature Engineering**  
-   - Created Age Group  
-   - Created Purchase Frequency feature
-4. **SQL Analysis**  
-   - Wrote 11 queries using CTEs, CASE statements, Window Functions (`ROW_NUMBER()`), and aggregations
-   - Analyzed revenue, discount impact, and customer behavior
-5. **Customer Segmentation**  
-   - Segmented customers into:
-     - **New**
-     - **Returning**
-     - **Loyal**
-6. **Dashboard Development**  
-   - Built interactive Power BI dashboard with KPI cards, charts, and slicers using DAX measures
+* **Category Dominance:**
+  * **Clothing** generates the largest share of revenue (~$104K) and customer orders (~1,700 items), followed closely by **Accessories** (~$74K).
+  * **Outerwear** and **Footwear** represent lower transaction counts, indicating targeted niche demand rather than mass daily volume.
+* **Age Group Spending Consistency:**
+  * **Young Adults** lead overall spending (~$62K total purchase volume), followed by **Middle Aged** shoppers (~$59K).
+  * Customer counts remain remarkably balanced across all four demographic tiers (~1,000 shoppers per age group), demonstrating broad cross-generational brand appeal.
+* **Subscription Revenue Potential:**
+  * With **73%** of shoppers currently non-subscribers, introducing member-exclusive incentives (e.g., free shipping, loyalty rewards) provides a clear lever to drive repeat visits and lift customer lifetime value (LTV).
 
 ---
 
-## 📊 Key Insights
+## 🛠️ Tech Stack & Workflow
 
-- Loyal customers contribute significantly higher average order value compared to new customers
-- Certain product categories show strong performance with discounts, while others experience margin pressure
-- A large portion of customers fall under the "New" segment, indicating strong potential for conversion campaigns
-- Specific age groups show higher purchase frequency and spending
-
-*(You can replace the above points with your actual findings)*
+* **Python (Pandas, NumPy, Seaborn):** Initial data cleaning, schema validation, outlier detection, and statistical distribution checks.
+* **Power BI Desktop:** Star-schema modeling, DAX aggregations (Average Order Value, Rating benchmarks, Category percentages).
+* **Interactive Dashboard UX:** Built with dynamic slicers for instant slicing by `Subscription Status`, `Gender`, and `Product Category`.
 
 ---
 
-## 📈 Power BI Dashboard
+## 📂 Repository Structure
 
-**Features included:**
-- 1 KPI Card
-- 5 Interactive Charts
-- 3 Slicers
-- Dynamic DAX measures
-
-**Live Dashboard:**  
-[Add your published Power BI link here]
-
----
-
-## 🧠 Skills Demonstrated
-
-- Data Cleaning & Validation
-- Feature Engineering
-- Advanced SQL (CTEs, Window Functions, CASE)
-- Customer Segmentation
-- Data Modeling & DAX in Power BI
-- Business Storytelling through Dashboard
-
----
-
-## 🚀 How to Run This Project
-
-1. Clone the repository
-2. Open the Jupyter Notebook for data cleaning and EDA
-3. Run the SQL scripts in MySQL
-4. Open the `.pbix` file in Power BI Desktop
-
----
-
-## ✍️ Author
-
-**Gadamsetti Dhanush Siva Raman**  
-Aspiring Data Analyst  
-
-- [LinkedIn](https://linkedin.com/in/dhanushsivaraman)  
-- [GitHub](https://github.com/CoderDhanush709)  
-- Email: dhanushsivaraman8@gmail.com
-
----
-
-## 📌 Note
-
-This is a personal portfolio project created for learning and demonstration purposes.
+```text
+├── customer_behaviour_dashboard.png       # Dashboard screenshot preview
+├── customer_shopping_trends.csv          # Raw customer retail dataset
+├── Customer_Behavior_Analysis.ipynb      # Python data wrangling & EDA notebook
+├── Customer_Behavior_Dashboard.pbix      # Power BI interactive file
+└── README.md                             # Project overview and key findings
